@@ -45,6 +45,11 @@ function! s:HL(group, fg, bg, attr)
     endif
 endfun
 
+" Publically exposed highlight() function.
+function! deepspace#highlight(group, fg, bg, attr)
+  call s:HL(a:group, a:fg, a:bg, a:attr)
+endfunction
+
 " Editor Highlights
 call s:HL('ColorColumn',                    '',         s:gray4,    '')
 call s:HL('Cursor',                         s:gray2,    s:gray5,    '')
